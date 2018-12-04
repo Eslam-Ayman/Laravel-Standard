@@ -1,18 +1,18 @@
 @extends('layouts.app')
-@php $lang_register = 'auth/register.'; @endphp
+{{-- @php $langRegister = 'auth/register.'; @endphp --}}
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __($lang_register.'title') }}</div>
+                <div class="card-header">{{ __($langRegister.'title') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __($lang_register.'name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __($langRegister.'name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __($lang_register.'email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __($langRegister.'email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __($lang_register.'password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __($langRegister.'password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __($lang_register.'confirm-password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __($langRegister.'confirm-password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -63,7 +63,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __($lang_register.'title') }}
+                                    {{ __($langRegister.'title') }}
                                 </button>
                             </div>
                         </div>

@@ -5,7 +5,7 @@
 
 <body>
     <div id="app">
-       @include('inc.LangPaths')
+       {{-- @include('inc.LangPaths') --}} <!-- laravel couldn't include variables from this file  -->
        @include('inc.nav')
 
         <main class="py-4">

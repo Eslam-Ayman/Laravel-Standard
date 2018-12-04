@@ -147,13 +147,12 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        // 1-  composer require unisharp/laravel-ckeditor
-        /* 2- */ Unisharp\Ckeditor\ServiceProvider::class,
-        // 3 -  php artisan vendor:publish --tag=ckeditor
-
         /*
          * Package Service Providers...
          */
+        // 1-  composer require unisharp/laravel-ckeditor
+        /* 2- */ Unisharp\Ckeditor\ServiceProvider::class,
+        // 3 -  php artisan vendor:publish --tag=ckeditor
 
         /*
          * Application Service Providers...
@@ -163,6 +162,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class,
 
     ],
 

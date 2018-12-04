@@ -1,6 +1,7 @@
 @php
 
-$lang_nav = 'inc/nav.';
-$lang_login = 'auth/login.';
-$lang_register = 'auth/register.';
+$langNav = 'inc/nav.';
+$langLogin = 'auth/login.';
+$langRegister = 'auth/register.';
+
 @endphp

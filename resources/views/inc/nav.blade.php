@@ -1,4 +1,5 @@
-@php $lang_nav = 'inc/nav.'; @endphp
+{{-- @php $langNav = 'inc/nav.'; @endphp --}}
+
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -19,10 +20,10 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}"> {{ __($lang_nav.'signin') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}"> {{ __($langNav.'signin') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">@lang($lang_nav.'signup')</a>
+                        <a class="nav-link" href="{{ route('register') }}">@lang($langNav.'signup')</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
@@ -34,7 +35,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __($lang_nav.'sign Out') }}
+                                {{ __($langNav.'sign Out') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
