@@ -37,7 +37,11 @@ class AppServiceProvider extends ServiceProvider
         // second Argument either i could refrence a class here because in many times  you wanna dedicated object to handel that process 
         // or you could use the Anonymous (closure) fun here
         // view()->composer('inc.nav', 'ClassName');
-        // view()->composer('inc/nav');
+        // view()->composer('inc/nav', 'ClassName');
+        // view()->composer('*', 'ClassName'); // to make it for all blades gloupl
+        // you can use calss instead of gloupl function
+        // View::composer('*', 'ClassName'); 
+
     }
 
     /**

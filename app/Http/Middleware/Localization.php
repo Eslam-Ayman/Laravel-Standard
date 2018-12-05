@@ -20,11 +20,14 @@ class Localization
     {
         if(Session::has('locale')){
             $current_locale= Session::get('locale');//get saved session locale value
-            App::setLocale($current_locale); // set app localization with locale value session
+            // App::setLocale($current_locale); // set app localization with locale value session
+            app()->setLocale($current_locale); // you can use it as getLocale() rather than to check session in your process
             Carbon::setLocale($current_locale); //set carbon localization for date/time system with locale value session
         }
         else{
            $app_locale = session('locale', config('app.locale')); // set session locale with app localization setting & return the locale value
+            // App::setLocale($app_locale); // set app localization with locale value session
+            app()->setLocale($app_locale);  // you can use it as getLocale() rather than to check session in your process
             Carbon::setLocale($app_locale);//set carbon localization with current app localization configuration
         }
         return $next($request);
