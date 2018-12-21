@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         /*-------------*/
         // if there is the only one blade we had to shate in, i think it will honstly be fine to be here in this function
         // but if there are more than one shared variable and there are many blades you want to specific variables to every one 
-        // then you must create your own service provider " php artisan make:provider ViewComposerServiceProvider " & type it in config app.providor
+        // then you must create your own service provider " php artisan make:provider ViewComposerServiceProvider " & import it in config app.providor
 
         /*view()->composer('inc.nav', function($view){
             $view->with('varName', 'xxxx');

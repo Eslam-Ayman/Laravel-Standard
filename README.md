@@ -24,7 +24,7 @@ I decieded to make standard project for me to make it easy to start new projects
  6. Create an empty database for our application
  7. In the .env file, add database information to allow Laravel to connect to the database
  8. Migrate the database
-    - `php artisian migrate`
+    - `php artisan migrate`
     - if you don't need to migrate so import `drive.sql` in your DB
     - and after that in the steps of installing rating package you must run `php artisian migrate` which is one of steps in the installing rating package
  9. [Optional]: Seed the database
@@ -42,8 +42,9 @@ I decieded to make standard project for me to make it easy to start new projects
     ```
 
 # Resources
-	https://stackoverflow.com/questions/28608527/how-to-pass-data-to-all-views-in-laravel-5
-	https://laracasts.com/series/laravel-5-fundamentals/episodes/25
+ 1. share variable in blades
+    - https://stackoverflow.com/questions/28608527/how-to-pass-data-to-all-views-in-laravel-5
+    - https://laracasts.com/series/laravel-5-fundamentals/episodes/25
 
 # License 
 this project is free to every one who is starting to learn Laravel
