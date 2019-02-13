@@ -26,7 +26,6 @@ I decieded to make standard project for me to make it easy to start new projects
  8. Migrate the database
     - `php artisan migrate`
     - if you don't need to migrate so import `drive.sql` in your DB
-    - and after that in the steps of installing rating package you must run `php artisian migrate` which is one of steps in the installing rating package
  9. [Optional]: Seed the database
     - `php artisan db:seed`
 10. you must add mail configration in the `.env` file
@@ -42,9 +41,12 @@ I decieded to make standard project for me to make it easy to start new projects
     ```
 
 # Resources
- 1. share variable in blades
+ 1. share variable in specific blades or all blades
     - https://stackoverflow.com/questions/28608527/how-to-pass-data-to-all-views-in-laravel-5
     - https://laracasts.com/series/laravel-5-fundamentals/episodes/25
+2. Resizing Images using timthumb in laravel (on the fly, you don't need to sotre new croped image on the host)
+    - https://medium.com/@pramodpandey05/compress-image-using-timthumb-in-laravel-71d00e08376e
+    - https://github.com/GabrielGil/TimThumb
 
 # License 
 this project is free to every one who is starting to learn Laravel
