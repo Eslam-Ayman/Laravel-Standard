@@ -16,5 +16,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @if(app()->getLocale() == 'ar')
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css">
-     @endif
+    @endif
+
+    @yield('styles')
 </head>
