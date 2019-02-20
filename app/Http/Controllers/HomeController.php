@@ -53,6 +53,14 @@ class HomeController extends Controller
         // $posts = post::all(); // eloquent method (ORM) object-relational mapping
         // $posts = post::orderBy('title','desc')->take(1)->get();
         // return $posts = post::where('title','post two')->get();
+        /*return $posts = post::where('title','post two')->with(['user' => function ($query)
+        {
+            return $query->where('active',1)
+                    ->where('id',Auth::id());
+        }
+        }])->get();*/
+        // $products->attributes()->sync(array with the table colimns names and their value)
+
         // $posts = DB::select('select * from posts'); // Fluent query-builder
         // $posts = post::orderBy('title','desc')->paginate(1);  /*{{$posts->links()}}*/
         // --------------------------------------------------------------
@@ -112,6 +120,8 @@ class HomeController extends Controller
             /*if (auth()->user()->id !== $post->user_id) {
                 return redirect('/posts')->with('error', 'you can not access this page');
             }*/
+
+
             // -------------------------------------------
 
             // those next two statments are similar
@@ -119,4 +129,13 @@ class HomeController extends Controller
             // back()->with('error', 'you can not access this page')
             // redirect('/posts')->with('error', 'you can not access this page')
     }
+
+    /*public function index(Post $post) // here in the url you will send the id of the post and the laravel by automaticlly will search about it in the DB and retrive its object
+    {
+        // latest equal order by created_at desc
+        // tow next line ar equal response()->json($object) = $object->toJson()
+        return $post->comments()->with('user')->latest()->get()->toJson();
+        return response()->json($post->comments()->with('user')->latest()->get());
+    }*/
+
 }
