@@ -54,6 +54,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // here we can make Accessor
+    /*
+    To define an accessor, create a getFooAttribute method on your model where Foo is the "studly" cased name of the column you wish to access. In this example, we'll define an accessor for the first_name attribute. The accessor will automatically be called by Eloquent when attempting to retrieve the value of the first_name attribute:
+    */
+
+    public function getNameAttribute ($value)
+    {
+        return ucfirst($value); // stands for Upper Case First -> to make first Carachter of the word in Uppercase
+    }
+
     // Public function usr()
     // {
         /* 
