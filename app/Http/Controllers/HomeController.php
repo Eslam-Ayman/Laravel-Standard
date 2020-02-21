@@ -92,10 +92,7 @@ class HomeController extends Controller
             $path = $request->file('image_name')->store('public/posts_images');
             
             $fileToStore = $this->getUrl($path);
-            }
-            else {
-                $fileToStore = '/storage/posts_images/noImage.jpg';
-            }*/
+            */
             // --------------------------------------------------
             /*$title = "Hello, world!";
             return view('pages.index' , compact('title'));

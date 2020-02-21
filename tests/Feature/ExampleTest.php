@@ -7,6 +7,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
+    /*
+        // Functional Testing / acceptance testing
+    */
+
     /**
      * A basic test example.
      *

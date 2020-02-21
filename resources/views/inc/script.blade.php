@@ -9,4 +9,4 @@
     // id="article-ckeditor"
 </script>
 
-@yield('scripts')
+@yield('script')
